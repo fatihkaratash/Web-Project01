@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root{
+    --main-color: #5adef6;
+    --black-color: #121212;
+    --border: 0.1rem solid rgba(255,255,255,0.4)
+}
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin :0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s ease;
+
+}
+
+/*! Base html kodları*/
+html {
+    font-size: 62.5%; 
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--main-color);
+    
+}
+
+section{
+    padding: 3.5rem 7%;
+}
+
+a{
+    color: var(--black-color);
+    
+}
+.btn{
+    margin: 1rem;
+    display: inline-block;
+    padding: 2rem 3.75rem;
+    border-radius: 30rem;
+    font-size: 1.7rem;
+    color: #fff;
+    cursor: pointer;
+    background-color: var(--black-color);
+
+}
+
+.btn:hover{
+    opacity: 0.5;
+}
+
+.heading{
+    color:#fff;
+    text-transform: uppercase;
+    font-size: 4rem;
+    margin-bottom: 3.5rem;
+    border-bottom: 0.1rem solid  #fff;
+
+}
+
+.heading span{
+    color:var(--black-color);
+    text-transform: uppercase;
+}
+
+
+.logo img {
+    height : 7rem;
+}
+
+/*! Header kodları*/
+.header  .logo img {
+    height : 10rem;
+}
+
+.header {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    margin: 2rem 7%;
+    border-radius: 30rem;
+    box-shadow: 0px 0px 17px -2px rgba(0, 0, 0, 0.75) ;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+}
+
+
+
+.header .navbar a{
+    margin : 0.1rem;
+    font-size: 1.6rem;
+    color: var(--black-color);
+    border-bottom: 0.1rem solid transparent;
+}
+
+.header .navbar .active,
+
+.header .navbar a:hover{
+    border-color: var(--black-color);
+    padding-bottom: 0.1rem;
+}
+
+.header .buttons button{
+cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    background-color: transparent;
+}   
+/*! Header kodları*/
+
+/*! Home kodları*/
+.home{
+    min-height: 100vh;
+    background: url(../images/home.png)
+    no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: -14.5rem;
+
+    display: flex;
+    align-items: center;
+
+}
+
+.home .content{
+    max-width: 60rem;
+}
+
+.home .content h3{
+    font-size: 6rem;
+    color: #ed3636;
+}
+
+.home .content p{
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color:#0b0b0b;
+}
+
+/*! Home kodları*/
+
+/*! Sehir kodları*/
+.sehir .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.sehir .box-container .box{
+    padding: 3rem;
+    background-color:#fff ;
+    border-radius: 3rem;
+    background-color: #fff;
+    justify-content: space-between;
+   
+    width: calc(25% - 20px);
+    margin: 10px;
+    flex: 1 0 auto;
+}
+.sehir .box-container .box img {
+    max-width: 100%; /* Resmin maksimum genişliğini kutunun içine sığacak şekilde ayarlayın */
+    max-height: 100%; /* Resmin maksimum yüksekliğini kutunun içine sığacak şekilde ayarlayın */
+    display: block; /* Resmi blok olarak ayarlayın */
+}
+
+.box-bottom {
+    padding: 5px 10px;
+    display: flex; /* Butonları yatay olarak hizalamak için */
+    justify-content: center; /* Butonları ortalamak için */
+}
+
+.box-bottom a.btn {
+    font-size: 14px; /* Butonun metin boyutunu ayarlayın */
+    padding: 3px 10px; /* Butonun içerisindeki dolgu miktarını ayarlayın */
+    text-align: center;
+}
+
+.sehir .box-container .box .sehir-category {
+    font-size: 1.2rem;
+}
+.sehir .box-container .box h3 {
+    font-size: 2rem;
+    padding:0.5rem;
+    text-align: center;
+   }
+   
+/*! Sehir kodları*/
+
+/*! Miras kodları*/
+.miras .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.miras .box-container .box{
+    padding: 3rem;
+    background-color:#fff ;
+    border-radius: 3rem;
+    background-color: #fff;
+    justify-content: space-between;
+   
+    width: calc(25% - 20px);
+    margin: 10px;
+    flex: 1 0 auto;
+
+}
+
+.miras .box-container .box img {
+    max-width: 100%; /* Resmin maksimum genişliğini kutunun içine sığacak şekilde ayarlayın */
+    max-height: 100%; /* Resmin maksimum yüksekliğini kutunun içine sığacak şekilde ayarlayın */
+    display: block; /* Resmi blok olarak ayarlayın */
+}
+
+.miras .box-container .box .box-head{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 10;
+}
+
+.miras .box-container .box .box-head .title{
+   font-size: 1.4rem;
+
+}
+.miras .box-container .box .box-head .name{
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: start;
+    overflow-wrap: anywhere;
+ }
+
+
+.box-bottom {
+    padding: 5px 10px;
+    display: flex; /* Butonları yatay olarak hizalamak için */
+    justify-content: center; /* Butonları ortalamak için */
+}
+
+
+/*! Miras kodları*/
+
+/*! İlgi Alanlarım kodları*/
+.about .row{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    align-items: center;
+}
+.about .row .image{
+    flex: 1 1 45rem;
+    display: flex; /* İçeriği yatay olarak hizalamak için */
+    align-items: flex-start;
+    flex-direction: column;
+ }
+
+.about .row img{
+    max-width: 80%; /* Resmin maksimum genişliğini ayarlayın */
+    height:auto;
+ }  
+ 
+ .about .row .content{
+    flex: 1 1 10rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+ }
+
+ .about .row .content h3{
+    font-size: 3rem ;
+    color:#fff;
+ }
+
+ .about .row .content p{
+    font-size: 1.6rem;
+    color:#030303;
+    padding: 1rem 0;
+    line-height: 1.8;
+
+ }
+
+/*! İlgi Alanlarım kodları*/
