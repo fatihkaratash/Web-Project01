@@ -302,4 +302,186 @@ cursor: pointer;
 
  }
 
+
 /*! İlgi Alanlarım kodları*/
+
+/*! contact kodları*/
+.contact .row{
+
+    display: flex;
+    align-items: center;
+    background-color: var(--black-color);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact .row form {
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.contact .row form h3 {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color:#fff;
+}
+
+.contact .row form .inputBox span {
+    color: #fff;
+    font-size: 1.6rem;
+    padding-left: 1rem; /* Metinlerin sağında bir boşluk bırak */
+    align-self: center; /* Metinleri dikeyde ortala */
+
+}
+.contact .row form .inputBox {
+
+   display:flex;
+   align-items: center;
+   margin: 2rem 0;
+   border: var(--border);
+}
+
+.contact .row form .inputBox i{
+    align-items: flex-start;
+    color: #fff;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+
+.contact .row form .inputBox input{
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+    color:#fff;
+    text-transform: none;
+    background-color: transparent;
+}
+
+.contact .row form .btn{
+    color:var(--main-color);
+    background-color: #fff;
+    font-weight: bold;
+}
+
+/*! contact kodları*/
+
+
+.cv .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* İçeriği dikey olarak hizala */
+    background-color: #fff; /* İçerik kutusunun arka plan rengi */
+    padding: 3.5rem; /* İçerik kutusunun iç boşluğunu ayarla */
+    border-radius: 1rem; /* İçerik kutusunun köşelerine yuvarlaklık uygula */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* İçerik kutusuna gölge ekle */
+}
+
+.cv .content h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color:#040404;
+    margin-bottom: 2rem;
+}
+.cv .content ul {
+    list-style: none; /* Liste işaretlerini kaldır */
+    padding: 0; /* Liste içi boşluğu sıfırla */
+}
+
+.cv .content ul li {
+    font-size: 1.6rem; /* Liste öğelerinin metin boyutunu ayarla */
+    color: #333; /* Liste öğelerinin metin rengini belirle */
+    margin-bottom: 1rem; /* Liste öğeleri arasına boşluk ekle */
+}
+
+.cv .content ul li strong {
+    font-weight: bold; /* Kalın metin */
+}
+
+.cv .content ul ul {
+    margin-top: 1rem; /* İç içe geçmiş listeler arası boşluk */
+}
+
+
+/*! İlgi Alanlarım kodları bitti*/
+
+.footer{
+    background-color: var(--black-color);
+    text-align: center;
+
+}
+
+.footer .search{
+    display: flex;
+    justify-content: center;
+}
+
+.footer .search .search-input{
+    width: 30rem;
+}
+
+.footer .search .btn-primary{
+    background-color: var(--main-color);
+    padding: 1rem;
+    margin-left: 2rem;
+}
+
+.footer .share {
+     padding: 2rem 0;
+     justify-content: center;
+     margin-left: -10rem;
+}
+
+.footer .share a{
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem ;
+    color: #fff;
+    font-size: 2rem;
+    border:var(--border);
+    margin:0.3rem;
+}
+
+.footer .share a:hover{
+    background-color: var(--main-color);
+}
+
+.footer .link{
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap ;
+    gap:1rem;
+    
+}
+
+.footer .link a{
+    background-color: var(--main-color);
+    padding: 0.7rem 2rem;
+    color: #fff;
+    font-size: 2rem;
+    border:var(--border);
+}
+
+.footer .link a:hover{
+    background-color: #030303;
+    opacity: 0.7;
+}
+
+.footer .link a.active{
+    background-color: #030303;
+}
+
+.footer .credit{
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 300;
+    padding-top: 1.5rem;
+    font-style: italic;
+}
+
+.footer .credit span{
+    color: var(--main-color);
+}
+
+
