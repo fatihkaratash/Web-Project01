@@ -15,31 +15,44 @@
             <img src="images\logo.jpg" alt="logo">
         </a>
         <nav class = "navbar">
-            <a href="#" class="active" > Ana Menu </a>
-            <a href="#" > Özgeçmiş </a>
-            <a href="#" > Şehrim </a>
-            <a href="#" > İlgi Alanlarım </a>
-            <a href="#" > İletişim </a>
-            <a href="#" > Hakkımda </a>
+            <a href="index.html" class="active" > Ana Menu </a>
+            <a href="sehir.html" > Şehrim </a>
+            <a href="miras.html" > Mirasımız </a>
+            <a href="about.html"  > İlgi Alanlarım </a>
+            <a href="contact.html" > İletişim </a>
+            <a href="cv.html" > Hakkımda </a>
         </nav>
 
         <div class = "buttons">
-            <button>
+            <button id="search-btn">
                 <i class="fas fa-search"> </i>
             </button>
-            <button>
+            <button id="home-btn1">
                 <i class="fas fa-home"> </i>
             </button>
-            <button>
+            <button id="menu-btn">
                 <i class="fas fa-bars"> </i>
             </button>
+        </div>
+
+        <div class="search-form">
+            <input 
+            type="text"
+            class="search-input"
+            id="search-box"
+            placeholder="arama yapınız"/>
+            <i class="fas fa-search"></i>
+        </div>
+
+        <div class="home-button">
+
         </div>
 
     </header>
     <!-- header bitiiş-->
 
     <!-- home başlangıc-->
-    <section class = "home">
+    <section class = "home" id="home">
         <div class="content"><h3>BAŞTAN SONA WEB</h3>
             <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum maxime nesciunt sed, ad eius aperiam officiis veritatis beatae ipsa explicabo odit distinctio vero dolores voluptate laboriosam rerum cum reiciendis quisquam?</P>
             <a href="#" class="btn">Hakkımda'ya git</a>
@@ -49,7 +62,7 @@
     <!-- home bitiiş-->
 
     <!-- Şehrim-Menu başlangıc-->
-    <section class="sehir">
+    <section class="sehir" id="sehir">
         <h1 class="heading"> Benim <span>Şehrim </span> </h1>
         <div class="box-container">
             <div class="box">
@@ -98,7 +111,7 @@
     <!-- Şehrim-Menu bitiiş-->
 
     <!-- Miras başlangıc-->
-    <section class="miras">
+    <section class="miras" id="miras">
         <h1 class="heading">Bizim <span>mirasımız</span></h1>
         <div class="box-container">
             <div class="box">
@@ -166,7 +179,7 @@
     <!-- Miras bitiiş-->
 
     <!-- İlgi Alanlarım başlangıc-->
-    <section class="about">
+    <section class="about" id="about">
         <h1 class="heading">İlgi <span>Alanlarım</span></h1>
         <div class="row">
             <div class="image">
@@ -195,7 +208,7 @@
 
    
     <!-- Contact başlangıc-->
-    <section class="contact">
+    <section class="contact" id="contact">
         <h1 class="heading">Benimle <span>İletişim</span></h1>
        <div class="row">
              
@@ -226,7 +239,7 @@
     <!-- Contact bitiş-22--->
 
    
-    <section class="cv">
+    <section class="cv" id="cv">
         <h1 class="heading"> Admin <span>Hakkında</span></h1>
         <div class="content">
             <h2>Özgeçmiş / CV</h2>
@@ -274,12 +287,12 @@
         </div>
 
         <div class="link">
-            <a href="#" class="active" >Ana Menu</a>
-            <a href="#" > Özgeçmiş </a>
-            <a href="#" > Şehrim </a>
-            <a href="#" > İlgi Alanlarım </a>
-            <a href="#" > İletişim </a>
-            <a href="#" > Hakkımda </a>
+            <a href="index.html" class="active" > Ana Menu </a>
+            <a href="sehir.html" > Şehrim </a>
+            <a href="miras.html" > Mirasımız </a>
+            <a href="about.html"  > İlgi Alanlarım </a>
+            <a href="contact.html" > İletişim </a>
+            <a href="cv.html" > Hakkımda </a>
         </div>
 
         <div class="credit">
@@ -290,6 +303,6 @@
     </section>
 
 
-
+    <script src="js/script.js"></script>
 </body>
 </html>

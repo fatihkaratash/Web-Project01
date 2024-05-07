@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>İletişim</title>
+    <link rel="stylesheet" href="styles/style.css"/>
+</head>
+<body>
+    <!-- header başlangıc-->
+    
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="images\logo.jpg" alt="logo">
+        </a>
+        <nav class = "navbar">
+            <a href="index.html"  > Ana Menu </a>
+            <a href="sehir.html" > Şehrim </a>
+            <a href="miras.html" > Mirasımız </a>
+            <a href="about.html"  > İlgi Alanlarım </a>
+            <a href="contact.html" class="active" > İletişim </a>
+            <a href="cv.html" > Hakkımda </a>
+        </nav>
+
+        <div class = "buttons">
+            <button id="search-btn">
+                <i class="fas fa-search"> </i>
+            </button>
+            <button id="home-btn1">
+                <i class="fas fa-home"> </i>
+            </button>
+            <button id="menu-btn">
+                <i class="fas fa-bars"> </i>
+            </button>
+        </div>
+
+        <div class="search-form">
+            <input 
+            type="text"
+            class="search-input"
+            id="search-box"
+            placeholder="arama yapınız"/>
+            <i class="fas fa-search"></i>
+        </div>
+
+        <div class="home-button">
+
+        </div>
+
+    </header>
+    <!-- header bitiiş-->
+
+<!-- Contact başlangıc-->
+<section class="contact" id="contact">
+    <h1 class="heading">Benimle <span>İletişim</span></h1>
+   <div class="row">
+         
+             <form>
+             <h3> İletişim Bilgileri </h3>
+            <div class="inputBox">
+                <i class="fas fa-user"></i>
+                <span> İsim:</span>
+                <input type="text" placeholder="isim"/>
+            </div>
+
+            <div class="inputBox">
+                <i class="fas fa-envelope"></i>
+                <span> Mail:</span>
+                <input type="email" placeholder="mail"/>
+            </div>
+
+            <div class="inputBox">
+                <i class="fas fa-phone"></i>
+                <span> Telefon:</span>
+                <input type="number" placeholder="telefon"/>
+            </div>
+            <input type="submit" class="btn" value="İletişime Geç">
+            </form>
+   </div> 
+</section>
+
+<!-- Contact bitiş-22--->
+
+    <!-- Footer Bölümü -->
+    <section class="footer">
+        <div class="search">
+            <input type="text"
+            class="search-input" placeholder="Search"/>
+            <button class="btn btn-primary">Search</button>
+        </div>
+
+        <div class="share">
+            <a href="#" class="fab fa-github"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+        </div>
+
+        <div class="link">
+            <a href="index.html"  > Ana Menu </a>
+            <a href="sehir.html" > Şehrim </a>
+            <a href="miras.html" > Mirasımız </a>
+            <a href="about.html"  > İlgi Alanlarım </a>
+            <a href="contact.html" class="active" > İletişim </a>
+            <a href="cv.html" > Hakkımda </a>
+        </div>
+
+        <div class="credit">
+            Created by <span>M.Fatih Karataş</span> | all rights reserved
+        </div>
+
+
+    </section>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
