@@ -164,7 +164,7 @@ cursor: pointer;
 /*! Home kodları*/
 .home{
     min-height: 100vh;
-    background: url(../images/home.png)
+    background: url(../images/background.gif)
     no-repeat;
     background-size: cover;
     background-position: center;
@@ -181,7 +181,7 @@ cursor: pointer;
 
 .home .content h3{
     font-size: 6rem;
-    color: #ed3636;
+    color: #00e1ff;
 }
 
 .home .content p{
@@ -189,18 +189,45 @@ cursor: pointer;
     font-weight: 300;
     line-height: 1.8;
     padding: 1rem 0;
-    color:#0b0b0b;
+    color:#fff;
 }
 
 /*! Home kodları*/
 
 /*! Sehir kodları*/
+
+
+
+
+.sehir .btn{
+    font-size: 12px; 
+    padding: 10px 20px;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.sehir .row{
+    
+        display: flex;
+        flex-wrap: wrap;
+    
+}
+
+.sehir .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-left: 200px;
+}
+
+
+
 .sehir .box-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     
 }
+
 
 .sehir .box-container .box{
     padding: 3rem;
@@ -234,15 +261,18 @@ cursor: pointer;
 .sehir .box-container .box .sehir-category {
     font-size: 1.2rem;
 }
-.sehir .box-container .box h3 {
-    font-size: 2rem;
+.sehir  .container  {
+    font-size: 1.5rem;
     padding:0.5rem;
-    text-align: center;
+    
    }
    
 /*! Sehir kodları*/
 
 /*! Miras kodları*/
+.miras h3{
+    font-size: 5rem;
+}
 .miras .box-container{
     display: flex;
     flex-wrap: wrap;
@@ -328,7 +358,7 @@ cursor: pointer;
     color:#fff;
  }
 
- .about .row .content p{
+ .about .row .content {
     font-size: 1.6rem;
     color:#030303;
     padding: 1rem 0;

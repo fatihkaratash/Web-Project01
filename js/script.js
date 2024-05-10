@@ -40,4 +40,8 @@ document.getElementById("home-btn1").addEventListener("click", function() {
 });
 
 
+$(document).ready(function(){
+    $('.carousel').carousel();
+  });
+
 
