@@ -135,7 +135,7 @@ a{
 }
 
 .header .navbar a{
-    margin : 0.1rem;
+    margin : 0.6rem;
     font-size: 1.6rem;
     color: var(--black-color);
     border-bottom: 0.1rem solid transparent;
@@ -197,13 +197,14 @@ cursor: pointer;
 /*! Sehir kodları*/
 
 
-
-
 .sehir .btn{
     font-size: 12px; 
     padding: 10px 20px;
-    justify-content: center;
-    margin-left: 20px;
+    display: block;
+    margin: 0 auto;
+    background-color: rgb(10, 157, 157);
+    font-weight: bold;
+    font-size: large;
 }
 
 .sehir .row{
@@ -216,7 +217,7 @@ cursor: pointer;
 .sehir .col-md-6 {
     flex: 0 0 50%;
     max-width: 50%;
-    margin-left: 200px;
+    margin: 0 auto;
 }
 
 
@@ -276,7 +277,7 @@ cursor: pointer;
 .miras .box-container{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .miras .box-container .box{
@@ -286,7 +287,7 @@ cursor: pointer;
     background-color: #fff;
     justify-content: space-between;
    
-    width: calc(25% - 20px);
+    max-width: calc(400px + 6rem);
     margin: 10px;
     flex: 1 0 auto;
 
@@ -405,11 +406,13 @@ cursor: pointer;
    border: var(--border);
 }
 
+
 .contact .row form .inputBox i{
     align-items: flex-start;
     color: #fff;
     font-size: 2rem;
     padding-left: 2rem;
+    
 }
 
 .contact .row form .inputBox input{
@@ -578,6 +581,30 @@ cursor: pointer;
         display: inline-block;
     }
 
+    .miras .box-container .box {
+        max-width: 100%; /* Resmin maksimum genişliğini kutunun içine sığacak şekilde ayarlayın */
+        max-height: 100%; /* Resmin maksimum yüksekliğini kutunun içine sığacak şekilde ayarlayın */
+        display: block; /* Resmi blok olarak ayarlayın */
+    }
+
+    .sehir .box-container .box {
+        width: calc(50% - 20px); /* Kutu genişliğini yeniden ayarlayın */
+        padding: 1rem; /* Padding değerini düşürün */
+        margin: 10px auto; /* Margin değerini otomatik hizalamaya çevirin */
+    }
+
+    .sehir .box-container .box img {
+        max-width: 100%; /* Resmin maksimum genişliğini ayarlayın */
+        height: auto; /* Yüksekliği otomatik ayarlayın */
+    }
+
+    .box-bottom {
+        display: none; /* Butonları gizleyin */
+    }
+
+
+    
+
     .header .navbar{
         position: absolute;
         top: 95%;
@@ -586,7 +613,8 @@ cursor: pointer;
         width: 30rem;
         box-shadow: 0px 10px 14px 0px rgb(0 0 0 / 75%);
         right: -100%;
-        
+        overflow-y: hidden;
+        display: none;
     }
 
     .header .navbar.active{
@@ -594,6 +622,7 @@ cursor: pointer;
          /* veya arka plan renginize uygun bir değer */
          max-height: 55vh; /* Belirli bir yükseklik, örneğin viewport yüksekliğinin %80'i */
          overflow-y: auto;
+         display: block;
     }
 
     .header .navbar a{
