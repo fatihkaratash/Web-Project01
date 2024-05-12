@@ -63,25 +63,53 @@
             <div class="inputBox">
                 <i class="fas fa-user"></i>
                 <span> İsim:</span>
-                <input type="text" placeholder="isim"/>
+                <input type="text" placeholder="isim" id="name" name="name"/>
             </div>
 
             <div class="inputBox">
                 <i class="fas fa-envelope"></i>
                 <span> Mail:</span>
-                <input type="email" placeholder="mail"/>
+                <input type="email" placeholder="mail" id="mail" name="mail"/>
             </div>
 
-            <div class="inputBox" style="display:flex; align-items: flex-start;">
+            <div class="inputBox" style="display:flex; ">
                 <i class="fas fa-message" style="align-self: flex-start; margin-top:10px;"></i>
                 <span style="align-self: flex-start; margin-top:10px;"> Mesajınız:</span>
-                <input type="text" placeholder="Mesaj " style="height: 400px; width: 300px; align-items: flex-start; "/>
+                <input type="textarea" id="message" name="message" placeholder="Mesaj" style="height: 400px; width: 300px; align-self: flex-start "/>
             </div>
-            <input type="submit" class="btn" value="İletişime Geç">
-            <input type="submit" class="btn" value="Hepsini sil">
+
+            <button class="btn" type="reset" id="submit" name="submit" value="Reset"
+                    onclick="check()">Temizle</button>
+
+                <button class="btn" type="submit" name="gonder" id="sub">Gönder</button>
             </form>
    </div> 
 </section>
+
+<script type="text/javascript">
+    function control(frm) {
+        var kullaniciadi = frm.name.value;
+        var email = frm.mail.value;
+        var msg = frm.message.value;
+        var ilkpos = email.indexOf("@");
+        var sonpos = email.lastIndexOf(".");
+
+        if (msg == null || msg == "" || msg.length < 10) {
+            alert("Mesaj boş veya 10 karakterden az olamaz");
+            return false;
+        }
+        if (kullaniciadi == null || kullaniciadi == "" || kullaniciadi.length < 4) {
+            alert("Kullanıcı adı 4 karakterden az olamaz");
+            return false;
+        }
+        if (ilkpos < 1 || sonpos < atpos + 2 || sonpos + 2 >= email.length) {
+            alert("Geçerli email adresi girin");
+            return false;
+        }
+
+        return true;
+    }
+</script>
 
 <!-- Contact bitiş-22--->
 
