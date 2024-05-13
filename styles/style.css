@@ -19,6 +19,8 @@
 
 }
 
+
+
 /*! Base html kodları*/
 html {
     font-size: 62.5%; 
@@ -84,6 +86,31 @@ a{
     height : 7rem;
 }
 
+
+/*! Header kodları*/
+   .table {
+    background-color: turquoise;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+
+.table th,
+.table td {
+    background-color: wheat;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.table th {
+    background-color: #f2f2f2;
+}
+
+#basliklar {
+    font-weight: bold;
+}
+/*! Header kodları*/
 /*! Header kodları*/
 
 .header .search-form{
@@ -270,6 +297,65 @@ cursor: pointer;
    
 /*! Sehir kodları*/
 
+
+/* Admin İletişim Tablo Stilleri */
+.admin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.adminIletisimTablo {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.adminIletisimTablo h3 {
+    color: var(--main-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.adminIletisimTablo input[type="text"],
+.adminIletisimTablo input[type="password"] {
+    color:brown;
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 1.6rem;
+}
+
+/* Tablo stilleri */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+
+/* Tablo başlığı stilleri */
+.table th {
+    padding: 1rem;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Tablo hücreleri (veri) stilleri */
+.table td {
+    padding: 1rem;
+    border: 1px solid #ddd;
+}
+
+/* İkinci sütunun stilleri (burada sadece sağ kenar boşluğu var) */
+.table td:nth-child(2) {
+    border-right: none;
+}
+
 /*! Miras kodları*/
 .miras h3{
     font-size: 5rem;
@@ -413,6 +499,17 @@ cursor: pointer;
     font-size: 2rem;
     padding-left: 2rem;
     
+}
+
+.contact .row form .inputBox textarea {
+    width: 100%; /* Alanın yüzde 100 genişliğinde olmasını sağlar */
+    height: 400px; /* İstediğiniz yüksekliği ayarlayabilirsiniz */
+    padding: 1rem; /* İç boşluğu ayarlar */
+    font-size: 1.7rem; /* Yazı boyutunu belirler */
+    color: #fff; /* Yazı rengini belirler */
+    background-color: transparent; /* Arkaplan rengini belirler */
+    border: var(--border); /* Kenarlık rengini ve kalınlığını belirler */
+    resize: vertical; /* Sadece yatay yönde yeniden boyutlandırılmasını sağlar */
 }
 
 .contact .row form .inputBox input{

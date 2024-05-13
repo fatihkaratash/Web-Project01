@@ -49,4 +49,19 @@ $(document).ready(function(){
     }
 }  
 
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Form submitini engelle
+    
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    // Kullanıcı adı ve şifre doğrulaması
+    if (username === "b211210088" && password === "b211") {
+        // Başarılı giriş
+        window.location.href = "welcome.php"; // Yönlendirme yapabilirsiniz
+    } else {
+        // Hatalı giriş
+        document.getElementById("error-message").innerText = "Hatalı kullanıcı adı veya şifre!";
+    }
+});
 

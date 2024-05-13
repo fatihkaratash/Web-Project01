@@ -58,18 +58,18 @@
     <h1 class="heading">Benimle <span>İletişim</span></h1>
    <div class="row">
          
-             <form>
-             <h3> GİRİŞ YAP </h3>
+             <form id="loginForm" method="post" action="php/login.php" onsubmit="return validateform()">
+             <h3> GİRİŞ YAP </h3> 
             <div class="inputBox">
                 <i class="fas fa-user"></i>
                 <span> Kullanıcı Adı:</span>
-                <input type="text" placeholder="ad"/>
+                <input type="text" placeholder="ad" name="name" id="name"/>
             </div>
 
             <div class="inputBox">
                 <i class="fas fa-envelope"></i>
-                <span> Mail:</span>
-                <input type="email" placeholder="mail"/>
+                <span> Parola:</span>
+                <input type="password" placeholder="password" id="password" name="password"/>
             </div>
             <input type="submit" class="btn" value="GİRİŞ YAP" >
             <br><small style="color:#fff; font-size:larger; text-transform:lowercase" id="giris" >Email: B211210088@sakarya.edu.tr | şifre:B211210088</small>

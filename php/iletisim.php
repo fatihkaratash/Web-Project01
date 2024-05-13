@@ -8,7 +8,8 @@
     <title>İletişim</title>
     <link rel="stylesheet" href="/website/Web-Project01/styles/style.css"/>
 </head>
-<body >
+
+<body>
 
     <!--Menu Kismi-->
     <header class="header">
@@ -44,41 +45,50 @@
     </header>
     <!--Menu kismi-->
 
-    <section>
-    <div class="admin">
-        <div class="row">
-            <div class="adminIletisimTablo">
+    <table class="table">
+        <thead class="table">
+            <tr>
+                <th colspan="5" id="basliklar">
+                    <h3> GELEN BİLGİLER</h3>
+                </th>
+            </tr>
+        </thead>
 
-            <?php
-session_start();
+        <tbody>
+            <tr>
+                <td id="basliklar">Adınız:</td>
+                <td id="basliklar">
 
-if (isset($_POST["name"]) && isset($_POST["password"])) {
-    $name = $_POST["name"];
-    $password = $_POST["password"];
+                    <?php
+                    echo $_POST['name'];
+                    ?>
 
-    // Kullanıcı adı ve şifre kontrolü
-    if ($name === "b211210088@sakarya.edu.tr" && $password === "b211210088" || $name === "B211210088@sakarya.edu.tr" && $password === "B211210088") {
-        // Başarılı giriş
-        echo "Hoşgeldin " . $name . "<br>Girişin Onaylandı.";
-    } else {
-        // Hatalı giriş
-        echo "Kullanıcı epostası veya şifre hatalı";
-        //header("refresh:10; url=/website/Web-Project01/login.html"); 
-       // exit(); // Kodun daha fazla çalışmasını engelle
-    }
-} else {
-    // Kullanıcı adı veya şifre yoksa
-    echo "Kullanıcı adı veya şifre eksik";
-  //  header("refresh:10; url=/website/Web-Project01/login.html"); 
-   // exit(); // Kodun daha fazla çalışmasını engelle
-}
-?>
-            <
-        </div>
-    </div>
+                </td>
+            </tr>
 
+            <tr>
+                <td id="basliklar">E-Mail</td>
+                <td id="basliklar">
+                    <?php
+                    echo $_POST['mail'];
+                    ?>
+                </td>
+            </tr>
 
-    </section>
+            <tr>
+                <td id="basliklar">Mesajınız</td>
+                <td id="basliklar">
+                    <?php
+                    echo $_POST['message'];
+                    ?>
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+   
 
     <section class="footer">
         <div class="search">
@@ -94,10 +104,10 @@ if (isset($_POST["name"]) && isset($_POST["password"])) {
 
         <div class="link">
         <a href="/website/Web-Project01/index.html"  > Ana Menu </a>
-            <a href="/website/Web-Project01/sehir.html" > Şehrim </a>
-            <a href="/website/Web-Project01/miras.html" > Mirasımız </a>
-            <a href="/website/Web-Project01/about.html"  > İlgi Alanlarım </a>
-            <a href="/website/Web-Project01/contact.html" > İletişim </a>
+            <a href="/website/Web-Project01/index.html" > Şehrim </a>
+            <a href="/website/Web-Project01/sehir.html" > Mirasımız </a>
+            <a href="/website/Web-Project01/miras.html"  > İlgi Alanlarım </a>
+            <a href="/website/Web-Project01/about.html" > İletişim </a>
             <a href="/website/Web-Project01/cv.html"> Hakkımda </a>
             <a href="/website/Web-Project01/login.html" class="active"> Login</a>
         </div>
@@ -108,7 +118,7 @@ if (isset($_POST["name"]) && isset($_POST["password"])) {
 
 
     </section>
-
+    
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
 
@@ -118,6 +128,8 @@ if (isset($_POST["name"]) && isset($_POST["password"])) {
 
 
     <script src="script.js"></script>
+
+
 </body>
 
 </html>

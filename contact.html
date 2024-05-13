@@ -58,7 +58,7 @@
     <h1 class="heading">Benimle <span>İletişim</span></h1>
    <div class="row">
          
-             <form>
+             <form action="php/iletisim.php" name="Form" onsubmit="return control(this)" method="POST">
              <h3> İletişim Bilgileri </h3>
             <div class="inputBox">
                 <i class="fas fa-user"></i>
@@ -73,9 +73,8 @@
             </div>
 
             <div class="inputBox" style="display:flex; ">
-                <i class="fas fa-message" style="align-self: flex-start; margin-top:10px;"></i>
-                <span style="align-self: flex-start; margin-top:10px;"> Mesajınız:</span>
-                <input type="textarea" id="message" name="message" placeholder="Mesaj" style="height: 400px; width: 300px; align-self: flex-start "/>
+        
+                <textarea id="message" name="message" placeholder="Mesaj" style="height: 400px; width: 400px; align-self: flex-start;"></textarea>
             </div>
 
             <button class="btn" type="reset" id="submit" name="submit" value="Reset"
