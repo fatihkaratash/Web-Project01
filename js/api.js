@@ -12,6 +12,11 @@ function getStockPrice(symbol, elementId) {
             updatePrice(elementId, `${symbol} fiyatı alınamadı.`);
         });
 }
+document.getElementById('getPriceButton').addEventListener('click', function() {
+    getStockPrice('AAPL', 'applePrice');
+    getStockPrice('MSFT', 'microsoftPrice');
+    getStockPrice('GOOGL', 'googlePrice');
+});
 
 function updatePrice(elementId, text) {
     const element = document.getElementById(elementId);
@@ -21,6 +26,9 @@ function updatePrice(elementId, text) {
         element.classList.remove('animate');
     }, 1000);
 }
+
+
+
 
 //api*2
 
@@ -44,10 +52,7 @@ function updatePrice(elementId, text) {
                });
        });
        
-       document.getElementById('getPriceButton').addEventListener('click', function() {
-           getStockPrice('AAPL', 'applePrice');
-           getStockPrice('MSFT', 'microsoftPrice');
-           getStockPrice('GOOGL', 'googlePrice');
-       });
+       
+       
        
        //api//
