@@ -427,7 +427,7 @@ cursor: pointer;
 .crypto-box h2 {
     margin-top: 0;
 }
-.btn {
+.crypto-box .btn {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
@@ -436,7 +436,7 @@ cursor: pointer;
     cursor: pointer;
 }
 
-.btn:hover {
+.crypto-box .btn:hover {
     background-color: #45a049;
 }
 
