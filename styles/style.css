@@ -415,6 +415,44 @@ cursor: pointer;
 /*! Miras kodları*/
 
 /*! İlgi Alanlarım kodları*/
+
+.crypto-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-color: #030303;
+}
+.crypto-box h2 {
+    margin-top: 0;
+}
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.crypto-box p {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 10px 0;
+    transition: color 0.5s, transform 0.5s;
+}
+
+.crypto-box p.animate {
+    color: #FF5733;
+    transform: scale(1.1);
+}
+
+
 .about .row{
     display: flex;
     flex-wrap: wrap;
