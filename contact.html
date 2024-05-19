@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>İletişim</title>
     <link rel="stylesheet" href="styles/style.css"/>
@@ -52,7 +54,7 @@
 
     </header>
     <!-- header bitiiş-->
-
+    
 <!-- Contact başlangıc-->
 <section class="contact" id="contact">
     <h1 class="heading">Benimle <span>İletişim</span></h1>
@@ -63,24 +65,26 @@
             <div class="inputBox">
                 <i class="fas fa-user"></i>
                 <span> İsim:</span>
-                <input type="text" placeholder="isim" id="name" name="name"/>
+                <input type="text" placeholder="isim" ng-model="formData.name" id="name" name="name"/>
             </div>
 
             <div class="inputBox">
                 <i class="fas fa-envelope"></i>
                 <span> Mail:</span>
-                <input type="email" placeholder="mail" id="mail" name="mail"/>
+                <input type="email" placeholder="mail" ng-model="formData.email" id="mail" name="mail"/>
             </div>
 
             <div class="inputBox" style="display:flex; ">
         
-                <textarea id="message" name="message" placeholder="Mesaj" style="height: 400px; width: 400px; align-self: flex-start;"></textarea>
+                <textarea ng-model="formData.message" id="message" name="message" placeholder="Mesaj" style="height: 400px; width: 400px; align-self: flex-start;"></textarea>
             </div>
 
             <button class="btn" type="reset" id="submit" name="submit" value="Reset"
                     onclick="check()">Temizle</button>
 
                 <button class="btn" type="submit" name="gonder" id="sub">Gönder</button>
+                <br>
+                <button type="submit" class="btn" ng-click="validateFormAngular()">Gönder-NG</button>
             </form>
    </div> 
 </section>
@@ -108,6 +112,49 @@
 
         return true;
     }
+</script>
+
+<script>
+    angular.module('contactApp', [])
+        .controller('ContactController', function($scope) {
+            $scope.formData = {};
+
+            $scope.validateForm = function() {
+                // Normal JavaScript ile formun kontrolü
+                var name = $scope.formData.name;
+                var email = $scope.formData.email;
+                var message = $scope.formData.message;
+
+                if (!name || !email || !message) {
+                    alert('Lütfen tüm alanları doldurun!');
+                    return;
+                }
+
+                if (!validateEmail(email)) {
+                    alert('Geçerli bir e-posta adresi girin!');
+                    return;
+                }
+
+                alert('Form başarıyla gönderildi!');
+                $scope.formData = {};
+            };
+
+            $scope.validateFormAngular = function() {
+                // AngularJS ile formun kontrolü
+                if ($scope.contactForm.$invalid) {
+                    alert('Lütfen tüm alanları doldurun!');
+                    return;
+                }
+
+                alert('Form başarıyla gönderildi!');
+                $scope.formData = {};
+            };
+
+            function validateEmail(email) {
+                var re = /\S+@\S+\.\S+/;
+                return re.test(email);
+            }
+        });
 </script>
 
 <!-- Contact bitiş-22--->
